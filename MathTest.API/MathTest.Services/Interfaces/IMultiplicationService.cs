@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathTest.Services.Interfaces
 {
-    public interface IMoltiplicationService
+    public interface IMultiplicationService
     {
         public int Multiply(int x, int y);
     }

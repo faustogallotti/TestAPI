@@ -1,3 +1,5 @@
+using MathTest.Services;
+using MathTest.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +34,11 @@ namespace MathTest.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MathTest.API", Version = "v1" });
             });
+
+            services.AddScoped<IAdditionService, AdditionService>();
+            services.AddScoped<ISubtractionService, SubtractionService>();
+            services.AddScoped<IMultiplicationService, MultiplicationService>();
+            services.AddScoped<IDivisionService, DivisionService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

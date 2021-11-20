@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MathTest.Services
 {
-    public class MultiplicationService : IMoltiplicationService
+    public class MultiplicationService : IMultiplicationService
     {
         public int Multiply(int x, int y)
         {
